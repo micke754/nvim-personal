@@ -1,4 +1,3 @@
-
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-Left>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-Right>", "<C-w><C-l>", { desc = "Move focus to the right window" })
@@ -12,4 +11,8 @@ vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decreas
 vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- Hiding search highlight from / and ?
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+
+-- Mini Files
+
+vim.keymap.set("n", "<leader>ee", ":lua MiniFiles.open()<cr>", { desc = "Increase Window Width" })
