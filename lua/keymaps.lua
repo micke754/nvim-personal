@@ -1,3 +1,9 @@
+-- basic quality of life improvments
+vim.keymap.set("n", "<leader>w", ":w<cr>")
+vim.keymap.set("n", "<leader>q", ":q<cr>")
+vim.keymap.set("n", "<leader>s", ":split")
+vim.keymap.set("n", "<leader>v", ":vsplit")
+
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-Left>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-Right>", "<C-w><C-l>", { desc = "Move focus to the right window" })
@@ -16,3 +22,18 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 -- Mini Files
 
 vim.keymap.set("n", "<leader>ee", ":lua MiniFiles.open()<cr>", { desc = "Increase Window Width" })
+
+-- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- or just use <C-\><C-n> to exit terminal mode
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
