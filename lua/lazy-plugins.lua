@@ -15,12 +15,13 @@ require("lazy").setup({
 	--    require('Comment').setup({})
 
 	-- "gc" to comment visual regions/lines
-	-- { 'numToStr/Comment.nvim', opts = {} },
+	{ "numToStr/Comment.nvim", opts = {} },
 
 	-- modular approach: using `require 'path/name'` will
 	-- include a plugin definition from file lua/path/name.lua
 	-- NOTE:  All the included plugins with kickstart
 	-- require 'core-plugins/.autopairs',
+	require("themes.github-nvim-theme"),
 	require("core-plugins/cmp"),
 	require("core-plugins/conform"),
 	-- require 'core-plugins/.debug',
@@ -37,12 +38,10 @@ require("lazy").setup({
 	-- require 'core-plugins/which-key',
 
 	-- NOTE: All custom plugins I've added
-	-- require 'custom/plugins/neo-tree',
-	-- require 'custom.plugins.nvim-r',
-	-- require 'custom.plugins.dadbod',
-	-- require 'custom.plugins.noice',
-	-- require 'custom.plugins.flash',
-	-- require 'custom.themes.catppuccin',
+	-- require("custom-plugins.nvim-dbee"),
+	require("custom-plugins.nvim-dadbod"),
+	require("custom-plugins.nvim-r"),
+	require("custom-plugins.flash"),
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and

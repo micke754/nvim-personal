@@ -3,7 +3,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 -- vim.g.mapleader = " "
-vim.g.background = "light"
+-- vim.g.background = "light"
 -- vim.g.colorscheme = "retrobox"
 
 -- Make line numbers default
@@ -61,3 +61,5 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 25
+
+require("config.neovide-config")
