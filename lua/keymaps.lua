@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>q", ":q<cr>")
 -- vim.keymap.set("n", "<leader>v", ":vsplit")
 
 -- Choose Themes
-vim.keymap.set("n", "<leader>th", ":Telescope colorscheme <cr>", { desc = "Choosing theme" })
+-- vim.keymap.set("n", "<leader>th", ":Telescope colorscheme <cr>", { desc = "Choosing theme" })
 
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-Left>", "<C-w><C-h>", { desc = "Move focus to the left window" })

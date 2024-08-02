@@ -3,7 +3,7 @@
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-	-- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -20,22 +20,21 @@ require("lazy").setup({
 	-- modular approach: using `require 'path/name'` will
 	-- include a plugin definition from file lua/path/name.lua
 	-- NOTE:  All the included plugins with kickstart
-	-- require 'core-plugins/.autopairs',
-	require("themes.github-nvim-theme"),
+	require("core-plugins/autopairs"),
+	-- require("themes.github-nvim-theme"),
 	require("core-plugins/cmp"),
 	require("core-plugins/conform"),
 	-- require 'core-plugins/.debug',
-	-- require 'core-plugins/gitsigns',
-	-- require 'core-plugins/.indent_line',
-	-- require 'core-plugins/.lint',
+	require("core-plugins/gitsigns"),
+	require("core-plugins/indent_line"),
+	require("core-plugins/lint"),
 	require("core-plugins/lspconfig"),
 	require("core-plugins/mini"),
 	require("core-plugins.noice"),
 	require("core-plugins/telescope"),
 	require("core-plugins/todo-comments"),
-	-- require 'core-plugins/tokyonight',
 	require("core-plugins/treesitter"),
-	-- require 'core-plugins/which-key',
+	require("core-plugins/which-key"),
 
 	-- NOTE: All custom plugins I've added
 	-- require("custom-plugins.nvim-dbee"),
